@@ -1,0 +1,14 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/part-of: demo-app
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/full-gitops: "true"
+  name: demo-app
+spec:
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/sample-accelerators/tanzu-java-web-app
